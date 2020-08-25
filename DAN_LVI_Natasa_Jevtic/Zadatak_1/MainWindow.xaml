@@ -23,10 +23,11 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
-        <Label Grid.Column="1" Grid.Row="1" Content="Enter url:"/>
+        <Label Grid.Column="1" Grid.Row="1" Content="Enter URL:"/>
         <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding Url, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}" Width="150"
                  TextWrapping="Wrap"/>
-        <Button Grid.Column="3" Grid.Row="3" Command="{Binding Download}" Content="Download HTML" Width="100"/>
+        <Button Grid.Column="3" Grid.Row="3" Command="{Binding Download}" Content="Download HTML" 
+                Width="100" Height="22" VerticalAlignment="Top"/>
         <Button Grid.Column="3" Grid.Row="5" Command="{Binding Zip}" Content="Zip files"/>
     </Grid>
 </Window>
