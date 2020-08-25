@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Zadatak_1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Download HTML" MinHeight="180" MinWidth="300" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="6"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="6"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="6"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="1" Grid.Row="1" Content="Enter URL:"/>
+        <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding Url, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}" Width="150"
+                 TextWrapping="Wrap"/>
+        <Button Grid.Column="3" Grid.Row="3" Command="{Binding Download}" Content="Download HTML" 
+                Width="100" Height="22" VerticalAlignment="Top"/>
+        <Button Grid.Column="3" Grid.Row="5" Command="{Binding Zip}" Content="Zip files"/>
     </Grid>
 </Window>
